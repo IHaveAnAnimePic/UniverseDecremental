@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Universe Decremental" content="width=device-width, initial-scale=1.0">
+    <title>Universe Decremental</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script src="break_infinity.js" charset="utf-8" type="text/javascript"></script>
+<script src="main.js" charset="utf-8" type="text/javascript"></script>
+<body onload="render()">
+    <div class="header">
+        <p id="title">Universe Decremental</p>
+        <div class = "energyButton">
+            <button class = "energyButton" id = "getEnergy" style="display: none" onclick="getEnergy()">Reset your progress for <br>Energy</br> 
+            </button>
+        </div>
+        <p class = "universe">The universe is currently <span style = "font-size:50px" id="universeSize"> 0 </span> cube meters</p>
+        <p class = "universe" id="universeReduction">You have reduced the universe's size by 0%</p>
+        <div class = "tabButtons">
+            <button class = "tabButtons" onclick="changeTabs('main')">Main</button>
+            <button class = "tabButtons" onclick="changeTabs('options')">Options</button>
+            <button class = "tabButtons" id = "energyTab" style="display: none" onclick="changeTabs('energy')">Energy</button>
+        </div>
+    </div>
+    <div class = "tab" id = "main">
+        <p class = "center" id="nullSpaceCount">You have 0 Null Space (0/s)</p>
+        <p class = "center" id="scrapCount">You also have 0 Scraps</p>
+        <table style="width:100%">
+            <tbody>
+                <tr id = "compressors">
+                    <td>
+                        <span id="voidCompressorCount">Void Compressors: 0</span>
+                    </td>
+                    <td>
+                        <span id="voidCompressorEffect">Reducing the size of the universe by 1% a second </span>
+                    </td>
+                    <td>
+                    <button onclick="buyVoidCompressor()" id="buyVoidCompressor">Price for 1: 5.00 null space</button>
+                    </td>
+                    <td>
+                        <button onclick="buyMaxCompressors()" id="buyMaxCompressors">Buy max Compressors</button>
+                    </td>
+                </tr>
+                <tr id = "refactors">
+                    <td>
+                        <span id="spaceRefactorCount">Space Refactors: 0</span>
+                    </td>
+                    <td>
+                        <span id="spaceRefactorEffect">Reducing the cost multiplier of Compressors by 0%</span>
+                    </td>
+                    <td>
+                    <button onclick="buySpaceRefactor()" id="buySpaceRefactor">Price for 1: 2.00 scraps</button>
+                    </td>
+                    <td>
+                        <button onclick="buyMaxRefactors()" id="buyMaxRefactors">Buy max Refactors</button>
+                    </td>
+                </tr>
+                <tr id = "duplicators">
+                    <td>
+                        <span id="duplicatorCount">Duplicators: 0</span>
+                    </td>
+                    <td>
+                        <span id="duplicatorEffect">Multiplying Compressor effectiveness and scrap gain by 1x</span>
+                    </td>
+                    <td>
+                    <button onclick="buyDuplicator()" id="buyDuplicator">Price for 1: 10.00 scraps</button>
+                    </td>
+                    <td>
+                        <button onclick="buyMaxDuplicators()" id="buyMaxCompressors">Buy max Duplicators</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div  class="center">
+            <button onclick="getScraps()" id="getScraps">Scrap your Compressors (+0.00)</button>
+        </div>
+    </div>
+    <div style="display: none" class = "tab" id = "options">
+        <p class="center" id = "pressure">Your progress is being reduced by x0.00 due to pressure</p>
+        <p class="center">Your game is being saved every 15 seconds</p>
+        <div class = "center"> 
+            <button class = "options" onclick="reset()">Hard Reset</button>
+            <button class = "options" onclick="saveGame()">Save Game</button>
+        </div>
+    </div>
+    <div style="display: none" class = "tab" id = "energy">
+        <p class="center" id = "energyCounter">You have 0.00 energy.</p>
+        <table class = "center menu">
+            <tr>
+                <td> 
+                    <button class = "upgrade" id = "first" onclick="buyEnergyUp('first')">Increase building power (x1) <br>Cost: 1.00 Energy</button>
+                </td>
+                <td> 
+                    <button class = "upgrade" id = "second" onclick="buyEnergyUp('second')">Scrap gain is multiplied by 10<br> Cost: 1e50 Energy</button>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <button class = "upgrade" id = "third" onclick="buyEnergyUp('third')">Extra duplicators based on energy (+0.00) <br> Cost: 1e100 Energy</button>
+                </td>
+                <td> 
+                    <button class = "upgrade" id = "fourth" onclick="buyEnergyUp('fourth')">Makes the energy and pressure formula much better<br>Cost: 1e150 Energy</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

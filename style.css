@@ -1,0 +1,108 @@
+* {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(40, 40, 40);
+    margin: 10px 10px 10px 10px
+}
+
+button {
+    padding: 1px 6px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    width: 300px;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(255,255,255);
+    color: black;
+}
+
+.header {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.tabButtons {
+    display: inline;
+    width: 200px;
+    height: 40px;
+}
+
+button:disabled {
+    border-color: crimson;
+}
+.center {
+    text-align: center;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white
+}
+
+table.menu th,
+table.menu td {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.energyButton {
+    text-align: right;
+    position: absolute;
+    margin-left: 50%;
+}
+button.energyButton {
+    text-align: center;
+    font-size: 18px;
+    height: 100px;
+    width: 200px;
+    background-color: black;
+    border-color:orangered;
+}
+
+button.energyButton:hover {
+    background-color: orangered;
+    color: white;
+}
+
+#energyTab {
+    background-color: black;
+    border-color:orangered;
+}
+#energyTab:hover {
+    background-color: orangered;
+    color: white;
+}
+
+button.upgrade {
+    text-align: center;
+    font-size: 18px;
+    height: 150px;
+    width: 300px;
+    background-color: black;
+    border-color:orangered;
+}
+
+button.upgrade:hover {
+    background-color: white;
+    color: black;
+}
+button.upgrade:disabled {
+    background-color: orangered;
+    color: white;
+}
+.options {
+    margin: auto
+}
